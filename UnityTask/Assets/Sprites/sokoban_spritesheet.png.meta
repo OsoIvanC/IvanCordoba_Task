@@ -2168,13 +2168,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sokoban_spritesheet_94
+      name: gem_blue
       rect:
         serializedVersion: 2
         x: 80
         y: 2
         width: 20
-        height: 19
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2190,13 +2190,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sokoban_spritesheet_95
+      name: gem_green
       rect:
         serializedVersion: 2
         x: 60
         y: 2
         width: 20
-        height: 19
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2212,13 +2212,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sokoban_spritesheet_96
+      name: gem_gray
       rect:
         serializedVersion: 2
         x: 40
         y: 2
         width: 20
-        height: 19
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2234,13 +2234,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sokoban_spritesheet_97
+      name: gem_red
       rect:
         serializedVersion: 2
         x: 20
         y: 2
         width: 20
-        height: 19
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2256,13 +2256,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sokoban_spritesheet_98
+      name: gem_yellow
       rect:
         serializedVersion: 2
         x: 0
         y: 2
         width: 20
-        height: 19
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2273,6 +2273,50 @@ TextureImporter:
       bones: []
       spriteID: 18cb6f2981591ee469b601694d5a68df
       internalID: 765852943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c929b6dc1cc98946ba0fc4edd5a2122
+      internalID: 1239595304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin2
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 2
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1f108e0152f3344a78699c84d1e397
+      internalID: 1535808094
       vertices: []
       indices: 
       edges: []
@@ -2291,6 +2335,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      coin1: 1239595304
+      coin2: 1535808094
+      gem_blue: -954700965
+      gem_gray: 429527328
+      gem_green: 1506514651
+      gem_red: 861950815
+      gem_yellow: 765852943
       player_down1: 727582367
       player_down2: -1838024252
       player_down_idle: -1451336480
@@ -2384,11 +2435,6 @@ TextureImporter:
       sokoban_spritesheet_9: 2029545630
       sokoban_spritesheet_91: -633820676
       sokoban_spritesheet_93: -457033769
-      sokoban_spritesheet_94: -954700965
-      sokoban_spritesheet_95: 1506514651
-      sokoban_spritesheet_96: 429527328
-      sokoban_spritesheet_97: 861950815
-      sokoban_spritesheet_98: 765852943
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
