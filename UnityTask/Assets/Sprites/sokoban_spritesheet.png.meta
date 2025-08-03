@@ -1843,7 +1843,7 @@ TextureImporter:
         serializedVersion: 2
         x: 448
         y: 0
-        width: 46
+        width: 45
         height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1863,9 +1863,9 @@ TextureImporter:
       name: player_right2
       rect:
         serializedVersion: 2
-        x: 494
+        x: 493
         y: 0
-        width: 44
+        width: 45
         height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1909,7 +1909,7 @@ TextureImporter:
         serializedVersion: 2
         x: 538
         y: 0
-        width: 44
+        width: 45
         height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
