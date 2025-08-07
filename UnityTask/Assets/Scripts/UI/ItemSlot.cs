@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class ItemSlot : MonoBehaviour, IDropHandler
+public class ItemSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler , IPointerExitHandler
 {
     public void OnDrop(PointerEventData eventData)
     {
@@ -17,5 +18,15 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
         droppedItem.transform.SetParent(transform);
         droppedItem.transform.localPosition = Vector3.zero;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
     }
 }
