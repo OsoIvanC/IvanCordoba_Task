@@ -13,7 +13,8 @@ public  class Switchable : MonoBehaviour
     {
         foreach (GameObject obj in ObjectsToActivate)
         {
-            obj.layer = LayerIndexToGive; //LOGIC
+            obj.layer = LayerIndexToGive;
+            obj.GetComponent<SpriteRenderer>().color = Color.blue;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -22,10 +23,12 @@ public  class Switchable : MonoBehaviour
         {
             if (Inventory.Instance.GetItems.Count <= 0)
                 DialogueManaager.Instance.UpdateText("You have no gems to use");
-
-            Inventory.Instance.CanUseItem = true;
-            Inventory.Instance.SwitchToActivate = this;
-            DialogueManaager.Instance.UpdateText("Choose a gem to use");
+            else
+            {
+                Inventory.Instance.CanUseItem = true;
+                Inventory.Instance.SwitchToActivate = this;
+                DialogueManaager.Instance.UpdateText("Choose a gem to use");
+            }
         }
     }
 

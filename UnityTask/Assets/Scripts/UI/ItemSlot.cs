@@ -44,9 +44,12 @@ public class ItemSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler , IPoi
     {
         if (!Inventory.Instance.CanUseItem) return;
         
+        Canvas c = GetComponentInParent<Canvas>();
+        
         Inventory.Instance.SwitchToActivate.Activate();
-        Inventory.Instance.GetItems.Remove(Item);
+        Inventory.Instance.GetItems.Remove(item);
         gameObject.SetActive(false);
+        c.gameObject.SetActive(false);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
