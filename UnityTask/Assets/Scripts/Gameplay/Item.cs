@@ -10,16 +10,10 @@ public enum Type
 public class Item : MonoBehaviour
 {
     [SerializeField] Type ItemType;
-
-    Inventory PlayerInventory;
-
-    private void Awake()
-    {
-        PlayerInventory = FindFirstObjectByType<Inventory>();
-    }
+    
     private void PickUp()
     {
-        PlayerInventory.GetItems.Add(this);
+        Inventory.Instance.GetItems.Add(this);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,7 +21,9 @@ public class Item : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PickUp();
-            this.gameObject.SetActive(false);
+            DialogueManaager.Instance.UpdateText($"You picked up a {ItemType.ToString().ToLower()} gem");
+            InventoryUI.Instance.AddSlot(this);
+            gameObject.SetActive(false);
         }
     }
     

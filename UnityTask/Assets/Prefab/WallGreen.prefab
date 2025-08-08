@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallGreen
       objectReference: {fileID: 0}
+    - target: {fileID: 1345751196056618161, guid: ebf0fc88b35881f4b89e0636344d6066, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6388052429815241471, guid: ebf0fc88b35881f4b89e0636344d6066, type: 3}
       propertyPath: m_Color.b
       value: 0.2688679

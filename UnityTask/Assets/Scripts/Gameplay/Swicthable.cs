@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public  class Switchable : MonoBehaviour
@@ -15,12 +16,26 @@ public  class Switchable : MonoBehaviour
             obj.layer = LayerIndexToGive; //LOGIC
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("entered");
-        if (collision.gameObject.CompareTag("box")){
-            Activate();
-            collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (Inventory.Instance.GetItems.Count <= 0)
+                DialogueManaager.Instance.UpdateText("You have no gems to use");
+
+            Inventory.Instance.CanUseItem = true;
+            Inventory.Instance.SwitchToActivate = this;
+            DialogueManaager.Instance.UpdateText("Choose a gem to use");
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Inventory.Instance.CanUseItem = true;
+
+            Inventory.Instance.SwitchToActivate = null;
         }
     }
 

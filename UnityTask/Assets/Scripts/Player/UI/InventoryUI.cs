@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static InventoryUI Instance;
+
+    [SerializeField]
+    GameObject ItemSlotPrefab;
+
+    [SerializeField]
+    GameObject Content;
+    private void Awake()
     {
-        
+        Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddSlot(Item i)
     {
-        
+        ItemSlot slot = Instantiate(ItemSlotPrefab,Content.transform).GetComponent<ItemSlot>();
+        slot.Item = i;
     }
 }
