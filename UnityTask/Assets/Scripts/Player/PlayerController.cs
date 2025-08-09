@@ -1,5 +1,4 @@
-using Unity.VisualScripting;
-using UnityEditor.Animations;
+
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -35,7 +34,7 @@ public class PlayerController : MonoBehaviour
             }
         #endregion
 
-        #region CHARACTER_ANIMATIONS
+        #region CHARACTER_ANIMATION
             animatorController.SetFloat("MovementX", inputX);
             animatorController.SetFloat("MovementY", inputY);
             animatorController.SetFloat("LastX", lastDirection.x);
